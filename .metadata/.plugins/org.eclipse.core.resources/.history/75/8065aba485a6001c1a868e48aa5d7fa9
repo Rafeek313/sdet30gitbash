@@ -1,0 +1,13 @@
+package com.crm.PRACTICE;
+
+public class DebugPractice {
+	@Test
+	public void demo() {
+		System.out.println("enter the two integer value you want to devide");
+		DebugPractice dp=new DebugPractice();
+		dp.div(1, 0);
+	}
+public void div(int a,int b) {
+	int c=a/b;
+}
+}
