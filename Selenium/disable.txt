@@ -1,0 +1,46 @@
+public class Frames {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("file:///C:/Users/sandeep/Desktop/page1.html");
+driver.switchTo().frame(0);
+driver.findElement(By.id("d2")).sendKeys("J");
+driver.switchTo().parentFrame();
+driver.findElement(By.id("d1")).sendKeys("Q");
+driver.switchTo().frame("f1");
+driver.findElement(By.id("d2")).sendKeys("S");
+driver.switchTo().defaultContent();
+driver.findElement(By.id("d1")).sendKeys("S");
+WebElement e = driver.findElement(By.xpath("//iframe"));
+driver.switchTo().frame(e);
+driver.findElement(By.id("d2")).sendKeys("P");
+driver.switchTo().parentFrame();
+driver.findElement(By.id("d1")).sendKeys("P");
+}
+
+
+
+
+ 
+to Everyone
+public class JavaScriptExe {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("file:///C:/Users/sandeep/Desktop/disabled.html");
+driver.findElement(By.id("t1")).sendKeys("admin");
+JavascriptExecutor j= (JavascriptExecutor) driver;
+j.executeScript("document.getElementById('t2').value='manager'");
+driver.close();
+}
+}
+
+un : <input id="t1" type="text"/><br><br>
+pw : <input id="t2" type="text"/ disabled><br>
+<br>
+<input id="b1" type="button" value="Login"/>
+

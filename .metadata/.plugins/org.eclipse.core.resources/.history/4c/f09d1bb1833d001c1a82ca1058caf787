@@ -1,0 +1,16 @@
+package EclipseDemo;
+
+import java.util.Scanner;
+
+public class MainSwitchOdd {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		switch(n%2) {
+		case0:System.out.println("the given no.is even");
+		case1:System.out.println("the given no.is odd");
+
+	}
+
+}

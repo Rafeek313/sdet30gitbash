@@ -1,0 +1,18 @@
+WAP TO PRINT ALL OPTION PRESENT IN THE APPLICATION WITHOUT DUPLICATE?
+WAP TO PRINT ALL OPTION PRESENT IN THE APPLICATION HAVING DUPLICATE?
+WAS TO check specific option present in the application?input should be taken from user?
+automate the following scenario
+1.open the chrome browser
+2.enter the url(religare health)
+3.enter the policy no.
+4.click on DOB AND ENTER DOB
+5.enter contact no
+6.click on renew button
+ALERT POPUP
+HIDDEN DIVISON POPUP
+FILE UPLOAD POPUP
+FILE DOWNLOD POPUP
+CHILD WINDOW POPUP
+NOTIFICATION POPUP
+PRINT POPUP
+AUTHENTICATION POPUP

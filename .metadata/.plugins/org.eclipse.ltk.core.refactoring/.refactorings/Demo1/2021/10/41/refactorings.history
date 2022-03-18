@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;EclipseDemo.Pallindrome&apos; to &apos;PrimeNumber&apos;&#x0D;&#x0A;- Original project: &apos;Demo1&apos;&#x0D;&#x0A;- Original element: &apos;EclipseDemo.Pallindrome&apos;&#x0D;&#x0A;- Renamed element: &apos;EclipseDemo.PrimeNumber&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Pallindrome&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;EclipseDemo{Pallindrome.java[Pallindrome" matchStrategy="1" name="PrimeNumber" qualified="false" references="true" similarDeclarations="true" stamp="1633594282207" textual="false" version="1.0"/>
+</session>

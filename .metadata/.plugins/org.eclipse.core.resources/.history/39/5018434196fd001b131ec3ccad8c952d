@@ -1,0 +1,8 @@
+package EclipseDemo;
+
+public class A {
+int a;
+void display() {
+	
+}
+}

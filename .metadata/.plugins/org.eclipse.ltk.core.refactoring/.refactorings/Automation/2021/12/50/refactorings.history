@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;PrintCurrentUrl1.java&apos; to &apos;assignment&apos;" description="Move &apos;PrintCurrentUrl1.java&apos; to &apos;assignment&apos;" destination="src/assignment" element1="src/qsp/PrintCurrentUrl1.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1639205536556" updateReferences="true"/>
+</session>

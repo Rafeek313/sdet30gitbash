@@ -1,0 +1,17 @@
+package EclipseDemo;
+	class OddEven{
+	public static void main(String arg[]){
+	static int ar[]={1,2,3,4,5};
+	static int oddEven(int x[]){
+		int ec=0,oc=0;
+	for(int i=0;i<x.length;i++){
+	if(x[i]%2==0)
+	ec++;
+	else
+	oc++;
+	}
+
+	System.out.println("total no.of even number"+ec);
+	System.out.println("total no.of odd number"+oc);
+	}
+}

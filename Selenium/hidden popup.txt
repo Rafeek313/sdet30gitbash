@@ -1,0 +1,40 @@
+public class AlertPopup {
+static {
+System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("https://www.services.irctc.co.in/homebody.html");
+driver.findElement(By.id("details-button")).click();
+driver.findElement(By.id("proceed-link")).click();
+driver.findElement(By.id("button")).click();
+WebDriverWait wait=new WebDriverWait(driver,10);
+wait.until(ExpectedConditions.alertIsPresent());
+Alert a = driver.switchTo().alert();
+String text=a.getText();
+a.accept();
+System.out.println(text);
+driver.close();
+}
+}
+
+
+
+//div[.='June 2020']/..//p[text()='30']
+
+
+
+
+public class FileUpload {
+static {
+System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("file:///C:/Users/sandeep/Desktop/FileUpload.html");
+Thread.sleep(4000);
+driver.findElement(By.id("cv")).sendKeys("C:\\Users\\sandeep\\Desktop\\ankith.doc");
+driver.close();
+}
+}

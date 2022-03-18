@@ -1,0 +1,83 @@
+Testng Suite:-(TO PERFORM BATCH EXECUTION)
+Testng suite is an XML file which contains list of testng classes.which are to be executed.
+Testng classes or test classes means a class which contains test method(@test).
+Test method means a method which is having @test annotations.
+suite file is used for batch execution to create it.
+1.right click on the java project.
+2.go to testng and select convert to testng.
+3.click on finish.
+4.its create testng.xml suite file inside the java project.
+
+TO EXECUTE IT:
+1.right click on xml file
+2.go to Runas and select testng suite.
+
+CONTENT OF TESTNG:
+<suite name="Suite" parallel="none">
+<test name="Test">
+<classes>
+<class name="qsp.TestDemo"/>
+</classes>
+</test>
+</suite>
+
+
+public class TestDemo {
+@Test
+public void testDemo() {
+Reporter.log("welcome to testng",true);
+}
+@Test
+public void testDemo1() {
+Reporter.log("welcome to testng1",true);
+}
+@Test
+public void testDemo2() {
+Reporter.log("welcome to testng2",true);
+}
+}
+
+public class DeleteCustomer {
+@Test
+public void testDeleteCustomer() {
+Reporter.log("test case 3:Delete customer",true);
+}
+}
+
+
+
+public class CreateCustomer {
+@Test
+public void testCreateCustomer() {
+Reporter.log("test case 1 :create custumer",true);
+}
+@Test
+public void testModifyCustomer() {
+Reporter.log("Test case 2: Modify customer",true);
+}
+}
+
+Testng exception  selenium unchecked( it is a generic exception)
+we get this exception whenever there is a error in testng.
+
+1.if a class contains multiple test method in which order they are executed?
+alphabetic order(ascending order)
+
+2.How to execute the test method in required order?
+by using priority
+Note:
+Default priority is 0.if priority is duplicate then those method execute in alphabetic order.
+we can specify -ve value for priority.and it will execute in ascending order.variable and decimal no. are not allowed.
+syntax:
+@Test(priority=1)
+how do you run test method multiple times?
+by using invocation count
+Syntax:
+@Test(invocationcount=1)
+Note: default invocation count is 1.)
+if specify 0 or -ve value it will not execute the test method.fraction no and variable are not allowed.
+
+how do you make  test depends on another test?
+by using dependsOnMethods
+Syntax:
+@Test(dependsOnMethods="createcustomer")

@@ -1,0 +1,117 @@
+!SESSION 2022-03-10 16:30:01.123 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=15.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data C:\Windows -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-03-10 16:30:02.371
+!MESSAGE Could not obtain lock for workspace location
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-03-10 16:30:02.373
+!MESSAGE Could not obtain lock for workspace location
+!STACK 0
+java.io.IOException: The folder "C:\Windows\.metadata" is read-only.
+	at org.eclipse.osgi.internal.location.BasicLocation.lock(BasicLocation.java:193)
+	at org.eclipse.osgi.internal.location.BasicLocation.lock(BasicLocation.java:166)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.checkInstanceLocation(IDEApplication.java:226)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:142)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.egit.ui 4 0 2022-03-10 16:30:12.373
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.egit.ui.Activator.stop() of bundle org.eclipse.egit.ui.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:891)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1026)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1886)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1761)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:203)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:221)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.IllegalStateException: The platform metadata area could not be written: C:\Windows\.metadata.  By default the platform writes its content
+under the current working directory when the platform is launched.  Use the -data parameter to
+specify a different content area for the platform.
+	at org.eclipse.core.internal.runtime.DataArea.assertLocationInitialized(DataArea.java:73)
+	at org.eclipse.core.internal.runtime.DataArea.getStateLocation(DataArea.java:141)
+	at org.eclipse.core.internal.preferences.InstancePreferences.getBaseLocation(InstancePreferences.java:47)
+	at org.eclipse.core.internal.preferences.InstancePreferences.initializeChildren(InstancePreferences.java:212)
+	at org.eclipse.core.internal.preferences.InstancePreferences.<init>(InstancePreferences.java:62)
+	at org.eclipse.core.internal.preferences.InstancePreferences.internalCreate(InstancePreferences.java:224)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:352)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:340)
+	at org.eclipse.core.internal.preferences.PreferencesService.createNode(PreferencesService.java:395)
+	at org.eclipse.core.internal.preferences.RootPreferences.getChild(RootPreferences.java:63)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:98)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:87)
+	at org.eclipse.core.internal.preferences.legacy.PreferenceForwarder.<init>(PreferenceForwarder.java:39)
+	at org.eclipse.core.runtime.Plugin.lambda$0(Plugin.java:319)
+	at org.eclipse.core.runtime.Plugin.getPluginPreferences(Plugin.java:321)
+	at org.eclipse.core.runtime.Plugin.savePluginPreferences(Plugin.java:349)
+	at org.eclipse.ui.plugin.AbstractUIPlugin.savePreferenceStore(AbstractUIPlugin.java:436)
+	at org.eclipse.ui.plugin.AbstractUIPlugin.stop(AbstractUIPlugin.java:539)
+	at org.eclipse.egit.ui.Activator.stop(Activator.java:327)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:871)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:863)
+	... 13 more
+Root exception:
+java.lang.IllegalStateException: The platform metadata area could not be written: C:\Windows\.metadata.  By default the platform writes its content
+under the current working directory when the platform is launched.  Use the -data parameter to
+specify a different content area for the platform.
+	at org.eclipse.core.internal.runtime.DataArea.assertLocationInitialized(DataArea.java:73)
+	at org.eclipse.core.internal.runtime.DataArea.getStateLocation(DataArea.java:141)
+	at org.eclipse.core.internal.preferences.InstancePreferences.getBaseLocation(InstancePreferences.java:47)
+	at org.eclipse.core.internal.preferences.InstancePreferences.initializeChildren(InstancePreferences.java:212)
+	at org.eclipse.core.internal.preferences.InstancePreferences.<init>(InstancePreferences.java:62)
+	at org.eclipse.core.internal.preferences.InstancePreferences.internalCreate(InstancePreferences.java:224)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:352)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:340)
+	at org.eclipse.core.internal.preferences.PreferencesService.createNode(PreferencesService.java:395)
+	at org.eclipse.core.internal.preferences.RootPreferences.getChild(RootPreferences.java:63)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:98)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:87)
+	at org.eclipse.core.internal.preferences.legacy.PreferenceForwarder.<init>(PreferenceForwarder.java:39)
+	at org.eclipse.core.runtime.Plugin.lambda$0(Plugin.java:319)
+	at org.eclipse.core.runtime.Plugin.getPluginPreferences(Plugin.java:321)
+	at org.eclipse.core.runtime.Plugin.savePluginPreferences(Plugin.java:349)
+	at org.eclipse.ui.plugin.AbstractUIPlugin.savePreferenceStore(AbstractUIPlugin.java:436)
+	at org.eclipse.ui.plugin.AbstractUIPlugin.stop(AbstractUIPlugin.java:539)
+	at org.eclipse.egit.ui.Activator.stop(Activator.java:327)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:871)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:554)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:863)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:1026)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:371)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1886)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1761)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:275)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:203)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:660)
+	at org.eclipse.osgi.container.Module.stop(Module.java:521)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:207)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:221)
+	at java.base/java.lang.Thread.run(Thread.java:832)

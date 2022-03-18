@@ -1,0 +1,8 @@
+package com.crm.CreteContactTest;
+
+public class CreateContactTest {
+@Test
+public void createContactTests() {
+	
+}
+}

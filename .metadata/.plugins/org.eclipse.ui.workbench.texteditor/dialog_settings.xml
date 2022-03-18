@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="link"/>
+		<list key="findhistory">
+			<item value="driver.findElement(By.linkText(&quot;Forgotten password?&quot;))."/>
+			<item value="dc"/>
+			<item value="csk"/>
+			<item value="rcb"/>
+			<item value="f1"/>
+			<item value="red"/>
+			<item value="lhs.add(&quot;red&quot;);"/>
+			<item value="lst"/>
+			<item value=" rcb"/>
+			<item value="m1"/>
+			<item value="int y=sc.nextInt();"/>
+			<item value="int x=sc.nextInt();"/>
+			<item value="int a=sc.nextInt();"/>
+			<item value="case 1:"/>
+			<item value="case2"/>
+		</list>
+		<list key="replacehistory">
+			<item value="link"/>
+			<item value="ts"/>
+			<item value="dc"/>
+			<item value="csk"/>
+			<item value="f4"/>
+			<item value="f3"/>
+			<item value="f2"/>
+			<item value="white"/>
+			<item value="yellow"/>
+			<item value="black"/>
+			<item value="blue"/>
+			<item value="pink"/>
+			<item value="ls"/>
+			<item value="m2"/>
+			<item value="int z=sc.nextInt();"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="801"/>
+		<item key="DIALOG_Y_ORIGIN" value="222"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

@@ -1,0 +1,22 @@
+public class AllignedFacebook {
+static
+{
+System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+}
+public static void main(String[] args) {
+WebDriver driver=new ChromeDriver();
+driver.get("https://www.facebook.com/");
+int Y1 = driver.findElement(By.name("sex")).getLocation().getY();
+int Y2 = driver.findElement(By.id("u_0_7")).getLocation().getY();
+int Y3 = driver.findElement(By.id("u_0_8")).getLocation().getY();
+if(Y1==Y2||Y1==Y3||Y2==Y3)
+{
+System.out.println("Pass");
+}
+else
+{
+System.out.println("Fail");
+}
+driver.close();
+}
+}

@@ -1,0 +1,10 @@
+package EclipseDemo;
+
+public class MainSmall {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

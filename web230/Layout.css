@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    background-color: red;
+    color: gold;
+}
+#nav{
+border: 2px solid black;
+overflow: auto;
+background-color: chocolate;
+}
+ul{
+    float: right;
+    
+}
+li{
+    float: left;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 8px;
+    /* to remove bullets*/
+    list-style: none;
+    background-color: chartreuse;
+}
+a{
+    text-decoration: none;
+}
+aside{
+    width: 25%;
+    float: left;
+}
+section{
+    width: 50%;
+    float: left;
+}
+article{
+    width: 25%;
+    float:right;
+}

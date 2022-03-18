@@ -1,0 +1,28 @@
+<html>
+<body>
+<a id="d1" name="n1" class="c1" href="http://www.qspiders.com/" >Qspiders</a><br>
+<a id="d2" name="n2" class="c2" href="http://www.jspiders.com/" >Jspider</a><br>
+</body>
+</html>
+
+
+
+WAP to print all the links present in any website
+public class MultipleElements {
+static {
+System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("file:///C:/Users/sandeep/Desktop/desktop.new/link.html");
+List<WebElement> AllLinks = driver.findElements(By.xpath("//a"));
+int count = AllLinks.size();
+System.out.println(count);
+for(int i=0;i<count;i++) {
+WebElement Link1 = AllLinks.get(i);
+String text1 = Link1.getText();
+System.out.println(text1);
+}
+driver.close();
+}
+}

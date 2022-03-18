@@ -1,0 +1,19 @@
+public class SingleListbox {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+//open the chrome browser
+WebDriver driver=new ChromeDriver();
+driver.get("https://www.facebook.com/");
+WebElement DayListbox = driver.findElement(By.id("day"));
+Select s=new Select(DayListbox);
+s.selectByIndex(7);
+Thread.sleep(2000);
+s.selectByValue("16");
+Thread.sleep(2000);
+s.selectByVisibleText("31");
+driver.close();
+}
+}
+

@@ -1,0 +1,23 @@
+public class BtnEnabled {
+static {
+System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+}
+public static void main(String[] args) {
+WebDriver driver=new ChromeDriver();
+driver.get("http://demo.actitime.com/");
+
+WebElement btn = driver.findElement(By.id("//td[contains(@ id,'loginButtonContainer')]"));
+if(btn.isEnabled())
+{
+System.out.println("LoginButton is enabled");
+
+}
+else
+{
+System.out.println("Login Button is disabled");
+}
+}
+
+
+}
+

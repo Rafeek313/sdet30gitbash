@@ -1,0 +1,20 @@
+T1 : <input id="d1" type="text" /><br>
+
+<iframe id="f1" src="page2.html"></iframe>
+
+
+T2 : <input id="d2" type="text" >
+
+public class Frames {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("file:///C:/Users/sandeep/Desktop/page1.html");
+driver.switchTo().frame(0);
+driver.findElement(By.id("d2")).sendKeys("jsp");
+driver.switchTo().parentFrame();
+driver.findElement(By.id("d1")).sendKeys("qsp");
+}
+}

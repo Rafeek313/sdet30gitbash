@@ -1,0 +1,25 @@
+package EclipseDemo;
+
+public class B extends A {
+int num;
+B() {
+	System.out.println("hey B");
+}
+B(int a){
+	//super(10);
+	System.out.println("it's a argument of B");
+	
+}
+void display() {
+	 a=10;
+	 super.a=20;
+	 int c=a+super.a;
+	 System.out.println(c);
+}
+	public static void main(String[] args) {
+		B b=new B(0);
+		b.display();
+
+	}
+
+}

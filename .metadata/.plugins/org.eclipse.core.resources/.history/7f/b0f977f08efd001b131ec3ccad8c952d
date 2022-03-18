@@ -1,0 +1,11 @@
+package EclipseDemo;
+
+public class Love {
+ public void action() {
+	 Final f=new Final();
+		f.display();
+ }
+
+	
+}
+}

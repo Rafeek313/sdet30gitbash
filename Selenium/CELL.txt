@@ -1,0 +1,53 @@
+public class ExcelData {
+public static void main(String[] args) throws EncryptedDocumentException, IOException {
+//get java representative object of the physical file
+FileInputStream fis=new FileInputStream("./data/TestScript.xlsx");
+//open the excel in read mode or create workbook
+Workbook wb = WorkbookFactory.create(fis);
+//get the control of the sheet
+Sheet sheet = wb.getSheet("CreateCustomer");
+//get control of the row
+Row row = sheet.getRow(1);
+//get control of the cell
+Cell cell = row.getCell(4);
+//Read the String data
+double value = cell.getNumericCellValue();
+//print it on the console
+System.out.println(value);
+//close the workbook
+wb.close();
+}
+}
+
+WAP TO READ THE MULTIPLE DATA IN EXCEL?
+
+public class MultipleDataExcel {
+public static void main(String[] args) throws IOException {
+FileInputStream fis =new FileInputStream("./data/TestScript.xlsx");
+Workbook wb = WorkbookFactory.create(fis);
+int rowcount = wb.getSheet("CreateCustomer").getLastRowNum();
+for(int i=1;i<=rowcount;i++) {
+String un = wb.getSheet("CreateCustomer").getRow(i).getCell(0).toString();
+String pw = wb.getSheet("CreateCustomer").getRow(i).getCell(1).toString();
+System.out.println(un +"\t"+ pw);
+}
+}
+}
+
+public class WriteDataToExcel {
+
+public static void main(String[] args) throws EncryptedDocumentException, IOException {
+//read the data from external resource or get the java object--in read mode
+FileInputStream fis=new FileInputStream("./data/TestScript.xlsx");
+//open or go to the workbook and write the data
+Workbook wb = WorkbookFactory.create(fis);
+wb.getSheet("CreateCustomer").getRow(1).getCell(5).setCellValue("fail");
+//open the file in write mode
+FileOutputStream fos=new FileOutputStream("./data/TestScript.xlsx");
+//save the workbook in the write mode(actual writting happens here)
+wb.write(fos);
+//close the workbook
+wb.close();
+}
+
+}

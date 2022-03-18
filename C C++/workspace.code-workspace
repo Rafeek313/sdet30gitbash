@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\.vscode\\extensions\\vscjava.vscode-java-pack-0.18.3"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\.vscode\\extensions\\CC++"
+		}
+	],
+	"settings": {}
+}

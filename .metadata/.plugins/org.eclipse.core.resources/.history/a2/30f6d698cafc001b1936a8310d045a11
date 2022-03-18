@@ -1,0 +1,19 @@
+package EclipseDemo;
+
+public class Bank {
+	float getRateOfIntrest() {
+		return 0;
+		
+}
+
+	public static void main(String[] args) {
+		Bank b;
+		b=new Sbi();
+		b.getRateOfIntrest();
+		b=new Icici();
+		b.getRateOfIntrest();
+		b=new Axis();
+		b.getRateOfIntrest();
+	}
+
+}

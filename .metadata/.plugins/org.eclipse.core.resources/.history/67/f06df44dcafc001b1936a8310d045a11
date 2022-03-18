@@ -1,0 +1,13 @@
+package EclipseDemo;
+
+public class Bank {
+	float getRateOfIntrest() {
+		return 0;
+		
+}
+
+	public static void main(String[] args) {
+		
+	}
+
+}

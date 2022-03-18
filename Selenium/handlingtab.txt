@@ -1,0 +1,89 @@
+// was to find the no. of tabs present in the actitime application
+package qsp;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandlingTab {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("http://localhost/login.do");
+WebElement link = driver.findElement(By.linkText("actiTIME Inc."));
+link.click();
+Set<String> alltabs = driver.getWindowHandles();
+int count = alltabs.size();
+System.out.println(count);
+driver.quit();
+}
+}
+
+
+
+
+
+public class ClosingTabs {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("http://localhost/login.do");
+driver.findElement(By.linkText("actiTIME Inc.")).click();
+Set<String> alltabs = driver.getWindowHandles();
+int count = alltabs.size();
+System.out.println(count);
+for(String tab:alltabs) {
+driver.switchTo().window(tab);
+Thread.sleep(2000);
+driver.close();
+}
+}
+}
+
+
+public class ClosingTabs {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("http://localhost/login.do");
+driver.findElement(By.linkText("actiTIME Inc.")).click();
+Set<String> alltabs = driver.getWindowHandles();
+int count = alltabs.size();
+System.out.println(count);
+for(String tab:alltabs) {
+driver.switchTo().window(tab);
+Thread.sleep(2000);
+driver.close();
+}
+}
+}
+
+public class HandlingTab {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.get("http://localhost/login.do");
+driver.findElement(By.linkText("actiTIME Inc.")).click();
+Set<String> alltabs = driver.getWindowHandles();
+int count = alltabs.size();
+System.out.println(count);
+Iterator<String> it=alltabs.iterator();
+String parentwh = it.next();
+String childwh = it.next();
+driver.switchTo().window(childwh);
+driver.close();
+driver.switchTo().window(parentwh);
+driver.close();
+}
+}

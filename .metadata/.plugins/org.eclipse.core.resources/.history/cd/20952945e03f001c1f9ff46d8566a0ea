@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class MainFact {
+
+	public static void main(String[] args) {
+		System.out.println("enter the integer");
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int fact=1;
+		while(fact<n) {
+			fact=fact*n;
+			fact++;
+		}
+		System.out.println(fact);
+		
+
+	}
+
+}

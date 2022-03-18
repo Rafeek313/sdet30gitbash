@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\C C++"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"georgewfraser.vscode-javac"
+		]
+	},
+	"settings": {
+	}
+}

@@ -1,0 +1,8 @@
+package EclipseDemo;
+
+public class Sbi {
+float getRateOfIntrest() {
+	return 8.4f;
+	
+}
+}

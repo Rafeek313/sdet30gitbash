@@ -1,0 +1,7 @@
+package EclipseDemo;
+
+public class A {
+	void display() {
+		System.out.println("its A");
+	}
+}

@@ -1,0 +1,10 @@
+package EclipseDemo;
+
+public class Cnstrctr {
+
+	public static void main(String[] args) {
+		Sampleone s=new Sampleone();
+
+	}
+
+}

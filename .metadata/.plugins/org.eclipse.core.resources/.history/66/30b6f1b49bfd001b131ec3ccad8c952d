@@ -1,0 +1,7 @@
+package EclipseDemo;
+
+public class B extends A {
+void display() {
+	System.out.println("its B");
+}
+}

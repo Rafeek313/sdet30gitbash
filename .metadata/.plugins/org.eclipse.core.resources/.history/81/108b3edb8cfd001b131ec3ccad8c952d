@@ -1,0 +1,15 @@
+package EclipseDemo;
+
+public class Hey {
+int a;
+static int b;
+	public static void main(String[] args) {
+		Hey h=new Hey();
+		b=230;
+		int avalue = h.a=100;
+		h.b=270;
+		System.out.println(b);
+
+	}
+
+}

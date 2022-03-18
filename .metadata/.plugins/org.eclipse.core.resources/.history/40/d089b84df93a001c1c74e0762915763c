@@ -1,0 +1,28 @@
+package EclipseDemo;
+import java.util.Scanner;
+public class Xylem {
+		public static void main(String arg[]){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter value you have to check");
+	    int n=sc.nextInt();
+	   System.out.println(Xylem.check(n));
+	    }
+		static String check(int n) {
+		int os=0,ms=0,temp=n;
+		do{
+		int d=n%10;
+		if(temp==n||d==n) {
+		os=os+d;
+		}
+		else {
+		ms=ms+d;
+		n=n/10;
+		}
+		}while(n!=0);
+		if(ms==os)
+		return "xylem";
+		else
+		return "phloem";
+		}
+		}
+

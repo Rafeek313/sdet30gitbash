@@ -1,0 +1,11 @@
+package EclipseDemo;
+
+public class A {
+
+A() {
+	System.out.println("hello A");
+}
+A(int a){
+	System.out.println("it's a argument constructor of A");
+}
+}

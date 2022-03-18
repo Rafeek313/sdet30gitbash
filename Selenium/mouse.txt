@@ -1,0 +1,32 @@
+public class MouseHouver {
+static {
+System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+}
+public static void main(String[] args) throws InterruptedException {
+WebDriver driver=new ChromeDriver();
+driver.manage().window().maximize();
+driver.get("https://www.vtiger.com/");
+WebElement Resources = driver.findElement(By.xpath("//a[contains(text(),'Resources')]"));
+Actions a=new Actions(driver);
+a.moveToElement(Resources).perform();
+driver.findElement(By.xpath("//h6[contains(text(),'Contact')]")).click();
+String PhoneNumber = driver.findElement(By.xpath("//p[contains(text(),'Bengaluru')]/../p[2]")).getText();
+System.out.println("Bangalore PhoneNumber = "+PhoneNumber);
+driver.close();
+}
+}
+
+
+
+Set<String> allwh = driver.getWindowHandles();
+for(String wh:allwh)
+{
+driver.switchTo().window(wh);
+}
+
+List<WebElement> AllHeadings = driver.findElements(By.xpath("//h2"));
+for(WebElement s1:AllHeadings)
+{
+System.out.println(s1.getText());
+}
+driver.quit();
